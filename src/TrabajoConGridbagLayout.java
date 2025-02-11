@@ -48,6 +48,7 @@ class VentanaInicio extends JFrame{
 			agregarComponente(opcionVaciaCorreo, PanelButon1, 0, 6, 1, 1, gbcPanel);
 
 		gbc.fill = GridBagConstraints.HORIZONTAL;
+		gbc.insets = new Insets(5, 5, 5, 5);
 		agregarComponente(opcionVaciaCorreo, 1, 0, 1, 8);
 
 		JLabel txt2 = new JLabel("Include the following");
@@ -89,7 +90,7 @@ class VentanaInicio extends JFrame{
 		JCheckBox check7 = new JCheckBox("disable all JavaScrip");
 		agregarComponente(check7, 0, 14, 1, 1);
 
-		JCheckBox check8 = new JCheckBox("include archive link");
+		JCheckBox check8 = new JCheckBox("include archive/ link");
 		agregarComponente(check8, 0, 15, 1, 1);
 
 		JCheckBox check9 = new JCheckBox("include MonkeyRewads link");
