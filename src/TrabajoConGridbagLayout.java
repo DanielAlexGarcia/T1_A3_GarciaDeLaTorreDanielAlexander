@@ -10,9 +10,8 @@ class VentanaInicio extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("GridBagLayaout");
 		setVisible(true);
-		setSize(400,400);
-		setLocationRelativeTo(null);
 		
+		gbc.insets = new Insets(5, 5, 5, 5);
 
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 
@@ -30,26 +29,26 @@ class VentanaInicio extends JFrame{
 			JLabel panelTxt1 = new JLabel("Email Address");
 			agregarComponente(opcionVaciaCorreo, panelTxt1, 0, 0, 1, 1, gbcPanel);
 
-			JTextArea panelArea1 = new JTextArea();
+			JTextField panelArea1 = new JTextField();
 			agregarComponente(opcionVaciaCorreo, panelArea1, 0, 1, 1, 1, gbcPanel);
 
 			JLabel panelTxt2 = new JLabel("First Name");
 			agregarComponente(opcionVaciaCorreo, panelTxt2, 0, 2, 1, 1, gbcPanel);
 
-			JTextArea PanelArea2 = new JTextArea();
+			JTextField PanelArea2 = new JTextField();
 			agregarComponente(opcionVaciaCorreo, PanelArea2, 0, 3, 1, 1, gbcPanel);
 
 			JLabel PanelTxt3 = new JLabel("Last Name");
 			agregarComponente(opcionVaciaCorreo, PanelTxt3, 0, 4, 1, 1, gbcPanel);
 
-			JTextArea panelArea3 = new JTextArea();
+			JTextField panelArea3 = new JTextField();
 			agregarComponente(opcionVaciaCorreo, panelArea3, 0, 5, 1, 1, gbcPanel);
 
 			JButton PanelButon1 = new JButton("Subscribe");
 			agregarComponente(opcionVaciaCorreo, PanelButon1, 0, 6, 1, 1, gbcPanel);
 
 		gbc.fill = GridBagConstraints.HORIZONTAL;
-		agregarComponente(opcionVaciaCorreo, 1, 0, 1, 10);
+		agregarComponente(opcionVaciaCorreo, 1, 0, 1, 8);
 
 		JLabel txt2 = new JLabel("Include the following");
 		agregarComponente(txt2, 0, 2, 1, 1);
@@ -57,7 +56,7 @@ class VentanaInicio extends JFrame{
 		JCheckBox Check1 = new JCheckBox("A tittle for your form");
 		agregarComponente(Check1, 0, 3, 1, 1);
 
-		JTextArea txtArea1 = new JTextArea("Subscribe to our mailing list");
+		JTextField txtArea1 = new JTextField("Subscribe to our mailing list");
 		agregarComponente(txtArea1, 0, 4, 1, 1);
 
 		JCheckBox check2 = new JCheckBox("Only required fields");
@@ -78,7 +77,7 @@ class VentanaInicio extends JFrame{
 		JLabel txt3 = new JLabel("Set form width");
 		agregarComponente(txt3, 0, 10, 1, 1);
 
-		JTextArea txtArea2 = new JTextArea();
+		JTextField txtArea2 = new JTextField();
 		agregarComponente(txtArea2, 0, 11, 1, 1);
 
 		JLabel txt4 = new JLabel("Enhance your form");
@@ -97,7 +96,7 @@ class VentanaInicio extends JFrame{
 		agregarComponente(check9, 0, 16, 1, 1);
 
 		JLabel txtLateral1 = new JLabel("Copy/paste onto your site");
-		agregarComponente(txtLateral1, 1, 9, 1, 1);
+		agregarComponente(txtLateral1, 1, 8, 1, 1);
 
 		JTextArea TxtAreaLateral1 = new JTextArea(
 			"<form>\r\n" + //
@@ -113,7 +112,10 @@ class VentanaInicio extends JFrame{
 								"</script>\r\n" + //
 								"<!--End mc_embed_signup-->"
 		);
-		agregarComponente(TxtAreaLateral1, 1, 10, 1, 6);
+		agregarComponente(TxtAreaLateral1, 1, 9, 1, 6);
+
+		pack();
+		setLocationRelativeTo(null);
 		
 
 	}
