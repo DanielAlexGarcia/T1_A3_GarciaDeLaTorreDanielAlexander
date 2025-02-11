@@ -12,6 +12,7 @@ class VentanaInicio extends JFrame{
 		setVisible(true);
 		setSize(400,400);
 		setLocationRelativeTo(null);
+		
 
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 
@@ -47,7 +48,8 @@ class VentanaInicio extends JFrame{
 			JButton PanelButon1 = new JButton("Subscribe");
 			agregarComponente(opcionVaciaCorreo, PanelButon1, 0, 6, 1, 1, gbcPanel);
 
-		agregarComponente(opcionVaciaCorreo, 1, 0, 1, 17);
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		agregarComponente(opcionVaciaCorreo, 1, 0, 1, 10);
 
 		JLabel txt2 = new JLabel("Include the following");
 		agregarComponente(txt2, 0, 2, 1, 1);
@@ -94,8 +96,25 @@ class VentanaInicio extends JFrame{
 		JCheckBox check9 = new JCheckBox("include MonkeyRewads link");
 		agregarComponente(check9, 0, 16, 1, 1);
 
-		
+		JLabel txtLateral1 = new JLabel("Copy/paste onto your site");
+		agregarComponente(txtLateral1, 1, 9, 1, 1);
 
+		JTextArea TxtAreaLateral1 = new JTextArea(
+			"<form>\r\n" + //
+								"</div>\r\n" + //
+								"<script type=\"text/javascript\" src=\"/is3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\"></script>\r\n" + //
+								"<script type=\"text/javascript\">\r\n" + //
+								"    (function($) {\r\n" + //
+								"        window.fnames = new Array();\r\n" + //
+								"        window.ftypes = new Array();\r\n" + //
+								"        fnames[0] = 'EMAIL';ftypes[0] = 'email';fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME';ftypes[2] = 'text';\r\n" + //
+								"    }(jQuery));\r\n" + //
+								"    var $mcj = jQuery.noConflict(true);\r\n" + //
+								"</script>\r\n" + //
+								"<!--End mc_embed_signup-->"
+		);
+		agregarComponente(TxtAreaLateral1, 1, 10, 1, 6);
+		
 
 	}
 	public void agregarComponente(JComponent componente, int x, int y, int w, int h) {
